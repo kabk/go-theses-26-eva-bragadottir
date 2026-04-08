@@ -39,26 +39,27 @@
 
 	<header>
 		<h1>
-			hey lurker, i haven't finished this website
+			From Consumption to Digestion: 
+		</h1>
+		<h1 class="closer">
+			Rethinking Engagement in a Contemporary Media Environment
 		</h1>
 
 	</header>
 
 	<nav>
 		<ul>
-			<li><a href="#abstract">·</a></li>
-			<li><a href="#intro">·</a></li>
-			<li><a href="#backg">·</a></li>
-			<li><a href="#chap1">·</a></li>
-			<li><a href="#chap2">·</a></li>
-			<li><a href="#chap3">·</a></li>
-			<li><a href="#conclusion">·</a></li>
+			<button onclick="goToChapter('abstract')">·</button>
+			<button onclick="goToChapter('intro')">·</button>
+			<button onclick="goToChapter('backg')">·</button>
+			<button onclick="goToChapter('chap1')">·</button>
+			<button onclick="goToChapter('chap2')">·</button>
+			<button onclick="goToChapter('chap3')">·</button>
+			<button onclick="goToChapter('conclusion')">·</button>
 		</ul>
 	</nav>
 
 	<div class="page-wrapper">
-
-
 
 
 		<main>
@@ -72,16 +73,16 @@
 			</div>
 
 			<div id="abstract">
-				<h2>
+				<h2 class="extra-heading">
 					Abstract
 				</h2>
-				<p>
+				<p class="main-text">
 					This project investigates how contemporary media environments shape the way information is
 					encountered and processed, focusing on the tension between rapid consumption and meaningful
 					engagement. Sparked by the hollow experience of “mindless scrolling,” it asks how design can
 					intervene in systems that value speed and accumulation over actual reflection.
 				</p>
-				<p>
+				<p class="main-text">
 					Drawing on the work of media theorist Neil Postman and philosopher Friedrich Nietzsche, the project
 					explores engagement with information as a metabolic act – one that requires breaking down,
 					absorbing, and, crucially, discarding content. Through design-led inquiry, the work mirrors three
@@ -91,7 +92,7 @@
 					information and the way in which it is encountered determines whether engagement is dispersed and
 					hurried or sustained and reflective.
 				</p>
-				<p>
+				<p class="main-text">
 					Through the research a design method of transformation emerges; where the ‘at-a-glance’ legibility
 					of everyday commercial graphics is repurposed to frame denser, more substantive fragments of content
 					that are usually buried in complexity. While the familiar form promises effortless intake, the
@@ -102,22 +103,26 @@
 			</div>
 
 			<div id="intro">
-				<h2>
+				<h2 class="extra-heading">
 					Introduction
 				</h2>
-				<p>
-					“I ain’t reading all that,” I mutter, chuckling at my own meme reference as I swipe past a TikTok
+				<p class="main-text">
+					<button class="inline-btn" onclick="showImage()">
+						“I ain’t reading all that,”
+					</button>
+					I mutter, chuckling at my own meme reference as I swipe past a TikTok
 					video drowning in text. Approximately three seconds into the next clip, the reflex registers. I had
 					just encountered something that would have taken maybe ten seconds to engage with, yet I dismissed
 					it instantly in favour of something faster, more effortless.
 				</p>
-				<p>
+				<img id="tiktok-image" src="assets/images/sticker1.png" alt="TikTok visual">
+				<p class="main-text">
 					I recognise that I am scrolling toward a state of fulfilment that never arrives, stopping only when
 					a vague sense of exhaustion kicks in. In chasing easy intake, I have trained myself to avoid the
 					very effort required for fulfilling engagement, leaving me with a steady stream of information that
 					fails to foster any kind of reflection.
 				</p>
-				<p>
+				<p class="main-text">
 					This project examines the space where speed and excess undermine reflection – where information is
 					no longer a form of nourishment, but a product of optimisation. While optimisation prioritises
 					volume and ease of consumption, nourishment requires the time and attention necessary for an idea to
@@ -125,15 +130,17 @@
 					treating the mind as a digestive system that requires selection, duration, and transformation to
 					truly internalise what it takes in.
 				</p>
-				<p>
+				<p class="main-text">
 					This metabolic model of thinking is not new; philosopher Friedrich Nietzsche famously invoked
 					digestion as a metaphor for the labour of thought, emphasising the need to process and “chew” ideas
-					rather than merely swallow them whole. Within this framework, I propose interruption, pause, and
+					rather than merely swallow them whole.
+					<span><button class="toggleBtn">*</button></span>
+					Within this framework, I propose interruption, pause, and
 					resistance as ways of disrupting seamless loops of information consumption. I describe these moments
 					of disruption as forms of friction, and explore them as a strategy enabling deeper reflection and
 					engagement.
 				</p>
-				<p>
+				<p class="main-text">
 					Within this framework, I explore interruption, pause, and resistance as ways of disrupting the
 					seamless loops of digital consumption. By treating these moments of disruption as forms of friction,
 					I investigate how design can move beyond efficient delivery to enable deeper reflection and
@@ -141,7 +148,7 @@
 					caught myself scrolling past something worth engaging with; choosing to pause and return to it
 					instead of continuing swiping.
 				</p>
-				<p>
+				<p class="main-text">
 					In my practice, I navigate this condition by deconstructing my own notes and intuitive drawings into
 					concentrated fragments, stripping them from the continuous flow to test their endurance. By allowing
 					design to dictate the rhythm of the encounter, I align my work with the critiques of practitioners
@@ -152,51 +159,64 @@
 			</div>
 
 			<div id="backg">
-				<h2>
+				<h2 class="extra-heading">
 					Background
 				</h2>
 
-				<p>
-					I read #1984# when I was fourteen, and George Orwell’s dystopian vision of a society in which
+				<p class="main-text">
+					I read
+					<span style="font-style:italic">1984</span><span><button class="toggleBtn">*</button></span>
+					when I was fourteen, and George Orwell’s dystopian vision of a society in which
 					individual freedom is suppressed through surveillance, control of information, and enforced
 					conformity left a lingering sense of unease. The novel depicts a world where truth is constantly
 					rewritten and independent thought is discouraged, leaving little room for personal agency. Since
 					reading the book, I have been wary of the parallels between the world described in this literary
 					classic and contemporary society – where information is increasingly shaped by media systems that
 					influence what we see and believe. Because of this, my attention was immediately caught when I
-					encountered the following passage in #Amusing Ourselves to Death#, a 1985 book by media theorist
+					encountered the following passage in
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,
+					a 1985 book by media theorist
 					Neil Postman:
 				</p>
-				<p class="quote">
+				<p class="blockquote">
 					“Orwell warns that we will be overcome by an externally imposed oppression. But in Huxley's vision,
 					no Big Brother is required to deprive people of their autonomy, maturity and history. As he saw it,
 					people will come to love their oppression, to adore the technologies that undo their capacities to
 					think.”
 				</p>
-				<p>
+				<p class="main-text">
 					Postman’s warning of a society that grows to love the same technologies that strip away its capacity
 					for thought haunts me as I think of all the times I have scrolled past content that would require
-					deeper engagement than half a glance and a chuckle. Here, he is referring to Aldous Huxley’s #Brave
-					New World#, a dystopian vision comparable to Orwell’s #1984#, but achieved through fundamentally
-					different means. In #1984#, control is enforced through censorship and fear, with authority imposed
-					from above. In contrast, #Brave New World# presents a society where control operates through
+					deeper engagement than half a glance and a chuckle. Here, he is referring to Aldous Huxley’s
+					<span style="font-style:italic">Brave New World</span>,
+					a dystopian vision comparable to Orwell’s
+					<span style="font-style:italic">1984</span>,
+					but achieved through fundamentally
+					different means. In
+					<span style="font-style:italic">1984</span>,
+					control is enforced through censorship and fear, with authority imposed
+					from above. In contrast,
+					<span style="font-style:italic">Brave New World</span>
+					presents a society where control operates through
 					pleasure, distraction, and constant stimulation. Rather than being oppressed, people are pacified;
 					kept content enough to not question the systems that shape their lives.
 				</p>
-				<p>
-					In #Amusing Ourselves to Death#, Postman compares Huxley’s vision to contemporary society, warning
+				<p class="main-text">
+					In
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,
+					Postman compares Huxley’s vision to contemporary society, warning
 					that communication and information systems that prioritise entertainment over reflection create
 					“present-centred mediums.” These platforms deliver fragmented information without context or
 					continuity, focusing on present events. Today, this dynamic is amplified by algorithm-driven feeds,
 					breaking news notifications, and short-form videos that surface isolated moments without broader
 					context.
 				</p>
-				<p>
+				<p class="main-text">
 					Postman argues that this sort of rapid-fire delivery leaves no room for evaluation; we move so
 					quickly from one snippet to the next that the act of collecting information overtakes the act of
 					actually processing it – digesting it.
 				</p>
-				<p>
+				<p class="main-text">
 					This idea prompted me to centre the metaphor of digestion in this project, both as a critique of
 					mindless intake and as a design method. By treating the mind as a digestive system, I approach
 					information as something that must be broken down, absorbed, or rejected. Through a process of
@@ -207,36 +227,40 @@
 			</div>
 
 			<div id="chap1">
+				<h3>
+					PHASE I
+				</h3>
 				<h2>
-					Phase I: Breaking Into Bites
+					Breaking Into Bites
 				</h2>
 
-				<p>
+				<p class="main-text">
 					I pause the audiobook. Rewind a few seconds. A sentence caught my attention, though I’m not sure
 					why. I let it play again, scrawling a few words down before they slip past. The impulse to continue
 					listening – to move on and stay in the flow – is still there, but I resist.
 				</p>
-				<p>
+				<p class="main-text">
 					This small gesture marked a shift in how I take things in. After realising how hollow the endless
 					scrolling on TikTok felt, I began intentionally slowing my intake, breaking information apart to
 					understand it. I have come to think of this as a kind of “breaking into bites”: isolating a fragment
 					that feels meaningful and staying with it a moment longer.
 				</p>
-				<p>
+				<p class="main-text">
 					Often, this happened while listening, drawing, and writing intuitively; pausing and rewinding to
 					capture fragments, then responding to them through text or image. Breaking information apart and
 					reassembling it in this way became a way of moving from consumption toward digestion.
 				</p>
-				<p>
+				<p class="main-text">
 					This approach of breaking down information and reflecting on it through text and image resonates
-					with the work of Portuguese artist Priscila Fernandes, particularly her exhibition #News Stand#. In
-					this project, Fernandes processes current events by translating them into drawings, as a way of
+					with the work of Portuguese artist Priscila Fernandes, particularly her exhibition
+					<span style="font-style:italic">News Stand</span>.
+					In this project, Fernandes processes current events by translating them into drawings, as a way of
 					processing violence and terror. The title refers to the familiar newspaper stand, a site typically
 					associated with the rapid distribution and consumption of information, while subtly disrupting that
 					expectation. Rather than facilitating the quick intake of news, she slows it down, isolating and
 					reworking them into something that can be held, examined, and reflected on.
 				</p>
-				<p>
+				<p class="main-text">
 					I see in this method a clear parallel to my own process, where instead of letting information pass
 					through, I intercept it. Through writing and drawing, I force my mind to move from passive reception
 					to active construction, preventing the information from being ‘swallowed’ whole and unexamined. This
@@ -247,11 +271,14 @@
 			</div>
 
 			<div id="chap2">
+				<h3>
+					PHASE II
+				</h3>
 				<h2>
-					Phase II: Metabolising
+					Metabolising
 				</h2>
 
-				<p>
+				<p class="main-text">
 					I still have all the writings and drawings from that initial breaking-down phase, but returning to
 					them now feels different. The immediacy is gone; the fragments feel harder to grasp, their original
 					spark slightly dampened without the context in which they were originally delivered. I re-read
@@ -260,7 +287,7 @@
 					real work of digestion begins.
 				</p>
 
-				<p>
+				<p class="main-text">
 					Breaking information into bites – as described in Phase I – is a meaningful step towards information
 					becoming nourishment, but it is only a part of a larger process. On its own, a fragment is just a
 					record of an encounter; it creates the conditions for reflection but does not guarantee it.
@@ -268,35 +295,36 @@
 					information must be processed and absorbed before it can become meaningful knowledge.
 				</p>
 
-				<p>
+				<p class="main-text">
 					In philosopher Friedrich Nietzsche’s use of digestion as a metaphor for thinking, he suggests that
 					thought is not about indiscriminate intake, but selection – the learned ability to affirm or refuse.
 					This act of selection requires a conscious engagement that fundamentally interrupts the mindless
 					consumption I recognised in my habit of scrolling. In this view, information cannot simply be
-					swallowed; to truly take hold, it must be filtered, metabolised, and transformed. In #Thus Spoke
-					Zarathustra#, Nietzsche writes:
+					swallowed; to truly take hold, it must be filtered, metabolised, and transformed. In
+					<span style="font-style:italic">Thus Spoke Zarathustra</span>,
+					Nietzsche writes:
 				</p>
 
-				<p class="quote">
+				<p class="blockquote">
 					“All-satisfiedness, which knoweth how to taste everything, – that is not the best taste! I honour
 					the refractory, fastidious tongues and stomachs, which have learned to say “I” and “Yea” and “Nay.”
 					To chew and digest everything, however – that is the genuine swine-nature!”
 				</p>
 
-				<p>
+				<p class="main-text">
 					Nietzsche’s concept of taste frames thought as an active process; a “digestive” labour that
 					transforms raw intake into something internal and personal. This idea of intellectual metabolism
 					became central to my own process, but also exposed its limitations.
 				</p>
 
-				<p>
+				<p class="main-text">
 					After breaking information into fragments through drawing and writing, I spent weeks sitting with
 					them, revisiting and reworking the pieces to see how their meanings shifted over time. While this
 					slowed engagement created a sense of connection, it also raised a question: was I actually
 					processing these fragments, or merely hoarding them?
 				</p>
 
-				<p>
+				<p class="main-text">
 					Nietzsche’s metaphor requires both absorption and refusal, yet my process lacked that final act of
 					elimination. It mirrored Priscila Fernandes’ approach – using drawing to work through information
 					without necessarily filtering it. While this added depth, it risked mere accumulation: collecting
@@ -305,7 +333,7 @@
 					crucially, what is allowed to remain.
 				</p>
 
-				<p>
+				<p class="main-text">
 					Inspired by Nietzsche’s selective approach, I began dissecting my drawings and writings. I isolated
 					elements that resonated and recontextualised them, rather than trying to force them back into their
 					original narrative. This slower rhythm – of deconstructing, reflecting, and reapproaching – felt
@@ -313,10 +341,12 @@
 					information must flow continuously to be useful.
 				</p>
 
-				<p>
+				<p class="main-text">
 					My attempt to find room for reflection aligns with several artistic practices that reclaim
 					meaningful engagement by shifting the rhythm of attention. I encountered a profound example of this
-					earlier this year at Museum Voorlinden: #Counting the Rice# by Serbian artist Marina Abramović. In
+					earlier this year at Museum Voorlinden:
+					<span style="font-style:italic">Counting the Rice</span>
+					by Serbian artist Marina Abramović. In
 					this exercise, participants spend an hour separating and counting individual grains of rice and
 					lentils. The task is intentionally repetitive, often provoking initial frustration or boredom. Yet,
 					as the minutes pass, the act shifts the participants’ attention, making it sharper, more deliberate.
@@ -324,15 +354,17 @@
 					material until the impulse to move on subsides, allowing a more active mode of engagement to emerge.
 				</p>
 
-				<p>
-					I see #Counting the Rice# as a model for the “intellectual metabolism” informing my project, as it
+				<p class="main-text">
+					I see
+					<span style="font-style:italic">Counting the Rice</span>
+					as a model for the “intellectual metabolism” informing my project, as it
 					requires a willingness to sit with ideas even when they feel dense or unresolved. Just as the body
 					needs time to extract nutrients from food, the mind requires a sustained encounter to transform
 					fragments of information into understanding. This realization led me back to my own archive of
 					drawings and writings, where I forced myself to “stay” by reworking them in new contexts.
 				</p>
 
-				<p>
+				<p class="main-text">
 					For example, a single phrase noted down while listening was initially just a disconnected bite. By
 					returning to it weeks later – rephrasing it, weaving it with other fragments from other sources – I
 					allowed the content to evolve rather than fixing it in a stagnant form. Metabolism, then, became a
@@ -347,7 +379,7 @@
 					Phase III: Discarding the Waste
 				</h2>
 
-				<p>
+				<p class="main-text">
 					Sifting through the material produced by reworking my initial fragments, I find my perspective has
 					shifted. By pulling these ideas from Phase I into new environments, I have forced a natural
 					filtration: the trivial fragments take less space, while the substantive have grown more resonant in
@@ -357,20 +389,24 @@
 					buried, allowing only the most meaningful ideas to truly take root.
 				</p>
 
-				<p>
+				<p class="main-text">
 					The relentless nature of contemporary media environments hinders the reflection required to
 					distinguish meaningful information from disposable noise. Without this distinction, the essential
 					“elimination” of trivial input becomes impossible. Algorithmically curated feeds and infinite
 					scrolls on platforms such as TikTok, deliver a stream of content that encourages continuous
-					consumption without reflection.(0) As Neil Postman warns in #Amusing Ourselves to Death#, we are
-					being rendered “unfit to remember” because information is stripped of the context needed to organise
+					consumption without reflection.(0) As Neil Postman warns in
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,
+					we are being rendered “unfit to remember” because information is stripped of the context needed to
+					organise
 					it into meaning. When a fact’s only context is the next meaningless short-form video, no patterns
 					can be discerned. What remains is constant intake without elimination; a state that leaves no space
 					for ideas to settle, much less be metabolised.
 				</p>
 
-				<p>
-					In his book #What Design Can't Do#, designer and writer Silvio Lorusso questions the designer’s
+				<p class="main-text">
+					In his book
+					<span style="font-style:italic">What Design Can't Do</span>,
+					designer and writer Silvio Lorusso questions the designer’s
 					complicity in mindless consumption. He rejects the assumption that design should optimize for speed
 					and volume, arguing instead for the necessity of boundaries. By replacing endless streams of content
 					with finite selections or intentional pauses, Lorusso proposes a more narrowed focus. For him, these
@@ -378,19 +414,25 @@
 					buried under the weight of “efficient” but empty data.
 				</p>
 
-				<p>
-					Lorusso’s project, #Shouldn't You Be Working?#, translates this theory into a physical intervention.
+				<p class="main-text">
+					Lorusso’s project,
+					<span style="font-style:italic">Shouldn't You Be Working?</span>,
+					translates this theory into a physical intervention.
 					By de-contextualising a browser extension that interrupts online activity with questions about
 					productivity and repositioning its prompts onto physical banners and stickers, he manifests the
-					“intentional pause” he advocates for in #What Design Can't Do#. These objects function as tactile
+					“intentional pause” he advocates for in
+					<span style="font-style:italic">What Design Can't Do</span>.
+					These objects function as tactile
 					boundaries; by dragging the invisible pressures of digital efficiency into the real world, Lorusso
 					forces a confrontation with the systems that govern our time, creating the very space for reflection
 					that the infinite scroll undermines.
 				</p>
 
-				<p>
-					A contrasting critique emerges in the installation #Speed Reading#, in which German artist Sebastian
-					Schmieg presents text at a pace exceeding human comprehension. While Lorusso uses interruptions to
+				<p class="main-text">
+					A contrasting critique emerges in the installation
+					<span style="font-style:italic">Speed Reading</span>,
+					in which German artist Sebastian Schmieg presents text at a pace exceeding human comprehension.
+					While Lorusso uses interruptions to
 					slow the viewer down, Schmieg accelerates the flow of information until reading becomes a purely
 					mechanical act. By pushing velocity to the point of illegibility, he exposes a media logic that
 					values the velocity of transmission over the depth of comprehension. Where Lorusso creates space,
@@ -399,25 +441,27 @@
 					metabolic conclusion: without pause, selection, or elimination, digestion becomes impossible.
 				</p>
 
-				<p>
+				<p class="main-text">
 					Within my own practice, I respond to this condition through a method of metabolic transformation.
 					Instead of interrupting the flow like Lorusso or accelerating it like Schmieg, I reprocess the
 					information itself – reorganising, condensing, and recirculating fragments to test their endurance.
-					This method is exemplified in my exercise #Instant Nourishment#, a series of typographic “nutrition
-					labels” that apply the visual and structural logic of commercial food packaging to abstract
+					This method is exemplified in my exercise
+					<span style="font-style:italic">Instant Nourishment</span>,
+					a series of typographic “nutrition labels” that apply the visual and structural logic of commercial
+					food packaging to abstract
 					concepts. By utilising simplified language and clear hierarchies, the project literalises the idea
 					of information as “nourishment” to the mind as food is to the body, and explores the tension between
 					the speed of consumption and the depth of digestion.
 				<p>
 
-				<p>
+				<p class="main-text">
 					This displacement makes the tension between rapid legibility and deep comprehension perceptible.
 					While the commercial aesthetic invites the viewer to skim, the nuanced content resists such a
 					cursory glance. This mismatch reveals a critical boundary: while design can optimise the speed of
 					delivery, it cannot bypass the labour of understanding. By forcing the eye to slow down where it
 					expects to move fast, the work exposes the gap between merely seeing and truly metabolising.
 				</p>
-				<p>
+				<p class="main-text">
 					In this way, transformation functions as a critical method. Adopting the logic of the “optimised
 					unit,” I expose how ideas of efficiency threaten to strip information of its capacity for
 					nourishment. Rather than resolving this contradiction, the work sustains it – making the mechanical
@@ -431,14 +475,14 @@
 					Conclusion
 				</h2>
 
-				<p>
+				<p class="main-text">
 					This project began with a simple observation: I was consuming information without processing it,
 					without feeling nourished by it. The more efficiently information was delivered to me, the less it
 					seemed to stay with me. What appeared to be a personal habit revealed a broader condition; one that
 					encourages constant intake, leaving little space for reflection or refusal.
 				</p>
 
-				<p>
+				<p class="main-text">
 					By treating design as a metabolic act, I have moved from the passive pacification Postman warned
 					about toward a practice of active resistance. This inquiry proves that the threat to our autonomy is
 					not just the abundance of information, but our inability to actively process and filter it. Through
@@ -447,7 +491,7 @@
 					deliberate boundaries to facilitate meaningful engagement.
 				</p>
 
-				<p>
+				<p class="main-text">
 					To reclaim the agency over what is metabolised and what is discarded, we must honour the space for
 					reflection and isolate the fragments that truly resonate. Allowing these ideas the room to take root
 					while shedding the rest transforms consumption from a passive habit into a deliberate act of
@@ -455,7 +499,7 @@
 					a flood of trivial information.
 				</p>
 
-				<p>
+				<p class="main-text">
 					Graphic design plays an active role in shaping these conditions, influencing how information is
 					taken in, how quickly it moves, and whether there is space for reflection. Because of this, design
 					does not only communicate information; it also determines how that information can be digested.
@@ -464,13 +508,98 @@
 					These moments slow the flow of information just enough to allow for digestion.
 				</p>
 
-				<p>
+				<p class="main-text">
 					My work does not aim to resolve the tension between speed and understanding, but to inhabit it. By
 					using the visual language of “efficient” consumption to force a halt, I introduce the friction
 					necessary for digestion. True nourishment, therefore, is found in this refusal to continue taking
 					in; it is found in the creation of a space where ideas are not merely seen, but transformed into
 					knowledge.
 				</p>
+			</div>
+
+			<div id="sidenote" class="hidden">
+				<h3>
+					REFERENCES
+				</h3>
+				<p class="side-text">
+					1. Friedrich Nietzsche,
+					<span style="font-style:italic">Thus Spoke Zarathustra</span>,
+					trans. Thomas Common (New York: Random House, Inc., 1917), 50.
+				</p>
+				<p class="side-text">
+					2. George Orwell,
+					<span style="font-style:italic">1984</span>,
+					(London: Secker & Warburg, 1949).
+				</p>
+				<p class="side-text">
+					3. Neil Postman,
+					<span style="font-style:italic">Amusing Ourselves to Death: Public Discourse in the Age of Show
+						Business</span>,
+					(New York: Penguin, 1985), Foreword, xix.
+				</p>
+				<p class="side-text">
+					4. Aldous Huxley,
+					<span style="font-style:italic">Brave New World</span>,
+					(London: Chatto & Windus, 1932).
+				</p>
+				<p class="side-text">
+					5. Postman,
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,
+					136.
+				</p>
+				<p class="side-text">
+					6. Priscila Fernandes,
+					<span style="font-style:italic">News Stand</span>,
+					Dialogue Gallery, 2025.
+				</p>
+				<p class="side-text">
+					7. Nietzsche,
+					<span style="font-style:italic"> Thus Spoke Zarathustra</span>,
+					216.
+				</p>
+				<p class="side-text">
+					8. Marina Abramović,
+					<span style="font-style:italic"> Counting the Rice</span>,
+					2015, viewed at Museum Voorlinden 2026.
+				</p>
+				<p class="side-text">
+					9. European Commission,
+					<span style="font-style:italic">“Commission preliminarily finds TikTok’s addictive design in breach
+						of the Digital Services Act,”</span>,
+					press release IP/26/312, February 6, 2026.
+				</p>
+				<p class="side-text">
+					10. Postman,
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,
+					137.
+				</p>
+				<p class="side-text">
+					11. Silvio Lorusso,
+					<span style="font-style:italic">What Design Can’t Do: Essays on Design and Disillusion</span>,
+					(Amsterdam: Set Margins’, 2023), 297.
+				</p>
+				<p class="side-text">
+					12. Silvio Lorusso,
+					<span style="font-style:italic">Shouldn’t You Be Working?</span>,
+					installation, 2016.
+				</p>
+				<p class="side-text">
+					13. Silvio Lorusso,
+					<span style="font-style:italic">What Design Can’t Do: Essays on Design and Disillusion</span>,
+					297.
+				</p>
+				<p class="side-text">
+					14. Sebastian Schmieg,
+					<span style="font-style:italic">Speed Reading</span>,
+					installation, 2018.
+				</p>
+				<p class="side-text">
+					15.
+					<span style="font-style:italic">Instant Nourishment</span>,
+					author’s own design project, 2026.
+				</p>
+				<button id="hideBtn">Hide</button>
+
 			</div>
 		</main>
 
@@ -481,7 +610,7 @@
 			<hr>
 
 			<p>
-				Last edit date: 2026/03/26
+				Last edit date: 2026/04/08
 			</p>
 
 		</footer>

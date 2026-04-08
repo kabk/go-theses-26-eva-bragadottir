@@ -27,7 +27,7 @@
 :root {
   /* Color values */
   --color-background: rgba(255, 255, 255, 1);
-  --color-text: rgba(0, 0, 0, 1);
+  --color-text: rgb(111, 111, 111);
   --color-text-link: rgba(0, 0, 0, 0.8);
   --color-text-link-hover: rgba(0,0,0,0.5);
   /* Font values */
@@ -121,36 +121,47 @@ h1 {
       text-align: center;
 }
 
+.closer {
+line-height: 90%;
+margin-top: -1.5rem;
+font-style: italic;
+}
+
 h2 {
   text-align: center;
   font-size: 1.618rem;
-  margin-top: 16%;
+  margin-top: 0rem;
+  margin-bottom: 1.618rem;
 }
 
 h3 {
-  /* h3 style */
+  text-align: center;
+  margin-bottom: 0.8rem;
+  margin-top: 4.8rem;
 }
 
-h4,
-h5,
-h6 {
-  /* h4-h5-h6 style */
+.extra-heading {
+  margin-top: 4.8rem;
 }
 
 p {
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  margin-top: 6%;
+  margin-bottom: 1.618rem;
   unicode-bidi: isolate;
-  line-height: 1.4rem;
+}
+
+.main-text{
+  line-height: 1.3rem;
 }
 
 
-blockquote {
-  /* blockquote element style */
+.blockquote {
+  margin-left: 10%;
+  margin-right: 8%;
+  font-style: italic;
+  line-height: 1.3rem;
 }
 
 hr {
@@ -177,10 +188,9 @@ div.page-wrapper {
 
 main {
   max-width: 60ch;
-  max-width: 720px;
+  max-width: 680px;
+  min-width: 35ch;
 }
-
-summary {}
 
 nav{
   top:0;
@@ -369,65 +379,6 @@ font
     background: rgb(255, 0, 0);
 }
 
-#dietsticker1 {
-  max-width: 75vw;
-  min-width: 25vw;
-  cursor: pointer;
-  rotate: -20deg;
-  margin-left: 0;
-}
-
-#dietsticker1:hover {
-  scale: 102%;
-  cursor: pointer;
-  rotate: -10deg;
-  transition: 0.3s ease-in-out;
-}
-
-#dietsticker2 {
-  max-width: 75vw;
-  cursor: pointer;
-  rotate: 35deg;
-  padding-left: -80%;
-  margin-left: 7vw;
-}
-
-#dietsticker2:hover {
-  scale: 102%;
-  cursor: pointer;
-  rotate: 25deg;
-  transition: 0.3s ease-in-out;
-}
-
-#dietsticker3 {
-  max-width: 75vw;
-  cursor: pointer;
-  rotate: 5deg;
-  margin-left: 8vw;
-}
-
-#dietsticker3:hover {
-  scale: 102%;
-  cursor: pointer;
-  rotate: -5deg;
-  transition: 0.3s ease-in-out;
-}
-
-#dietsticker4 {
-  max-width: 75vw;
-  cursor: pointer;
-  rotate: -20deg;
-  padding-left: 10%;
-  margin-left: 9vw;
-}
-
-#dietsticker4:hover {
-  scale: 102%;
-  cursor: pointer;
-  rotate: -10deg;
-  transition: 0.3s ease-in-out;
-}
-
 .inline-btn {
   display: inline;
   border: none;
@@ -501,29 +452,41 @@ font
   z-index: 6;
 }
 
-#sidenote {
-  padding: 10px;
-  margin-top: 10px;
-}
 
-.hidden {
+
+
+#sidenote {
+  padding-top: 1000px;
+  padding-bottom: 2%;
+  background-image: linear-gradient(transparent, white );
+  bottom: 0%;
+  top: auto;
+  z-index: 1;
+  max-width: 680px;
   display: none;
 }
 
-#toggleBtn {
-  display: inline-block;
-  cursor: pointer;
-  color:blue;
+
+ #sidenote.active {
+    display: block;
+    position: fixed;
 }
 
-#toggleBtn:hover {
-  cursor: pointer;
-  color: red;
+.side-text {
+  font-size: 14px;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 
-#toggleBtn.clicked {
-  color: red;
+#hideBtn {
+  cursor: pointer;
 }
+
+.toggleBtn {
+  z-index: 5; /* stays clickable */
+  cursor: pointer;
+}
+
 
 .chapter-nav button {
   padding: 8px 12px;
@@ -542,7 +505,7 @@ nav ul {
   display: flex;
   gap: .5rem;
 }
-nav ul a {
+nav ul button {
 
     font: inherit;
     font-feature-settings: inherit;
@@ -555,10 +518,10 @@ nav ul a {
 
     opacity: 1;
 }
-nav ul a:hover {
+nav ul button:hover {
   color: red;
   cursor: pointer;
 }
-nav ul a.active {
+nav ul button.active {
   color: blue;
 }

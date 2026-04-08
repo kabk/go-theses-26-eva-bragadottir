@@ -23,6 +23,11 @@ docReady(function() {
 
 });
 
+// image in text
+function showImage() { const img = document.getElementById("tiktok-image"); 
+  img.style.display = img.style.display === "block" ? "none" : "block"; }
+
+
 // images that animate on scroll
 const mapping = [
   { section: "intro", image: "img-intro" },
@@ -55,69 +60,28 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0
 });
 
-// button for sidenotes
-mapping.forEach(m => {
-  const el = document.getElementById(m.section);
-  if (el) observer.observe(el);
-});
+// toggle
 
-const btn = document.getElementById("toggleBtn");
-const sidenote = document.getElementById("sidenote");
+const buttons = document.querySelectorAll('.toggleBtn');
+const sidenote = document.getElementById('sidenote');
 
-btn.addEventListener("click", () => {
-  sidenote.classList.toggle("hidden");
-
-  // Optional: change button text
-  if (sidenote.classList.contains("hidden")) {
-    btn.textContent = "*";
-  } else {
-    btn.textContent = "*";
-  }
-});
-
-btn.addEventListener("click", () => {
-  btn.classList.add("clicked");
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    sidenote.classList.add('active');
+  });
 });
 
 
-
+// x button
+document.getElementById("hideBtn").addEventListener("click", function() {
+  sidenote.classList.remove("active");
+});
 
 
 // chapter navigation
-// function goToChapter(id) {
-//   document.getElementById(id).scrollIntoView({
-//     behavior: "smooth"
-//   });
-// }
-
-
-
-let chapterList = [ ];
-
-const chapterLinks = document.querySelectorAll( 'nav ul a[href^="#"]' );
-chapterLinks.forEach( link => chapterList.push(document.querySelector( link.getAttribute('href') ) ) );
-
-chapterList.reverse( );
-
-
-window.addEventListener( 'scroll', ( ) => {
-  const scrollTop = window.pageYOffset;
-  let matchFound = false;
-
-  chapterList.forEach( ( chapter, index ) => {
-    const heading = chapter.querySelector( ':scope h2' );
-    const headingStyle = window.getComputedStyle( heading );
-    const headingMarginTop = parseFloat( headingStyle.getPropertyValue( 'margin-top' ) );
-    const headingTop = chapter.offsetTop - headingMarginTop;
-
-    const chapterLink = chapterLinks[ chapterLinks.length - index - 1 ];
-
-    if ( !matchFound && headingTop - scrollTop < 50 ) {
-      chapterLink.classList.add( 'active' );
-
-      matchFound = true;
-    } else { 
-      chapterLink.classList.remove( 'active' );
-    }
-  } );
-} );
+function goToChapter(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+  sidenote.classList.remove('active');
+}
