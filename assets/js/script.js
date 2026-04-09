@@ -1,87 +1,77 @@
-
-
-
 // we make sure the JavaScript file loads after our HTML by using a function test if the HTML is loaded
 
 function docReady(fn) {
-  // see if DOM is already available
   if (document.readyState === "complete" || document.readyState === "interactive") {
-      // call on next available tick
       setTimeout(fn, 1);
   } else {
       document.addEventListener("DOMContentLoaded", fn);
   }
 }   
 
-
-
 docReady(function() {
 
-	// functions
-	// go
-	// here
+  // 🔥 overlay images (scalable version)
+  document.querySelectorAll(".inline-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
 
-});
+      const block = btn.closest("p")?.nextElementSibling;
+      if (!block) return;
 
-// image in text
-function showImage() { const img = document.getElementById("tiktok-image"); 
-  img.style.display = img.style.display === "block" ? "none" : "block"; }
+      const overlay = block.querySelector(".overlay-img");
+      if (!overlay) return;
 
-
-// images that animate on scroll
-const mapping = [
-  { section: "intro", image: "img-intro" },
-  { section: "backg", image: "img-backg" },
-  { section: "chap1", image: "img-chap1" },
-  { section: "chap2", image: "img-chap2" },
-  { section: "chap3", image: "img-chap3" },
-  { section: "conclusion", image: "img-conclusion" },
-];
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const match = mapping.find(m => m.section === entry.target.id);
-
-    if (!match) return;
-
-    const img = document.getElementById(match.image);
-
-    if (entry.isIntersecting) {
-      // scrolling into section → show image
-      img.classList.add("active");
-    } else {
-      // scrolling out of section → hide image
-      img.classList.remove("active");
-    }
+      overlay.classList.toggle("active");
+    });
   });
-}, {
-  root: null,
-  rootMargin: "-30% 0px -30%",
-  threshold: 0
-});
 
-// toggle
+  // 🔴 gray button (FIXED)
+  const bgBtn = document.getElementById("bgToggle");
 
-const buttons = document.querySelectorAll('.toggleBtn');
-const sidenote = document.getElementById('sidenote');
+  if (bgBtn) {
+    bgBtn.addEventListener("click", () => {
+      const header = document.querySelector("header");
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    sidenote.classList.add('active');
+      header.classList.remove("gold-header");   // remove gold
+      header.classList.add("red-header");       // always set gray
+    });
+  }
+
+  // 🟡 gold button (FIXED)
+  const goldBtn = document.getElementById("bgToggleGold");
+
+  if (goldBtn) {
+    goldBtn.addEventListener("click", () => {
+      const header = document.querySelector("header");
+
+      header.classList.remove("red-header");    // remove gray
+      header.classList.add("gold-header");      // always set gold
+    });
+  }
+
+  // toggle sidenote
+  const buttons = document.querySelectorAll('.toggleBtn');
+  const sidenote = document.getElementById('sidenote');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      sidenote.classList.add('active');
+    });
   });
+
+  // close sidenote
+  const hideBtn = document.getElementById("hideBtn");
+  if (hideBtn) {
+    hideBtn.addEventListener("click", () => {
+      sidenote.classList.remove("active");
+    });
+  }
+
+  // chapter navigation
+  window.goToChapter = function(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth"
+    });
+    sidenote.classList.remove('active');
+  };
+
 });
-
-
-// x button
-document.getElementById("hideBtn").addEventListener("click", function() {
-  sidenote.classList.remove("active");
-});
-
-
-// chapter navigation
-function goToChapter(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
-  sidenote.classList.remove('active');
-}
