@@ -9,8 +9,7 @@ function docReady(fn) {
 }   
 
 docReady(function() {
-
-  // 🔥 overlay images (scalable version)
+  //  overlay images (scalable version)
   document.querySelectorAll(".inline-btn").forEach(btn => {
     btn.addEventListener("click", () => {
 
@@ -24,7 +23,7 @@ docReady(function() {
     });
   });
 
-  // 🔴 gray button (FIXED)
+  // grey button
   const bgBtn = document.getElementById("bgToggle");
 
   if (bgBtn) {
@@ -36,14 +35,14 @@ docReady(function() {
     });
   }
 
-  // 🟡 gold button (FIXED)
+  // gold button
   const goldBtn = document.getElementById("bgToggleGold");
 
   if (goldBtn) {
     goldBtn.addEventListener("click", () => {
       const header = document.querySelector("header");
 
-      header.classList.remove("red-header");    // remove gray
+      header.classList.remove("red-header");    // remove grey
       header.classList.add("gold-header");      // always set gold
     });
   }

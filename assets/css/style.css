@@ -247,6 +247,7 @@ nav{
     --font-size: 18px;
   }
 
+  
   html,
   body {
     font: var(--font-size) var(--font-text);
@@ -335,7 +336,11 @@ nav{
 
 @media (max-width: 779px) {
   /* your 'mobile' overriding css properties here */
-font
+
+
+.side-text{
+  font-size: 0.6rem;
+}
 
 
   /* utility classes, mobile */
@@ -348,6 +353,7 @@ font
     display: block;
   }
 
+  
 }
 
 
@@ -464,6 +470,8 @@ font
   font-size: 14px;
   margin-bottom: 0.7%;
   margin-top: 0.7%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #hideBtn {
@@ -557,4 +565,27 @@ header.gold-header {
 #bgToggleGold:hover{
   scale: 1.04;
   transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 779px) {
+  /* your 'mobile' overriding css properties here */
+
+
+.side-text{
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+
+  /* utility classes, mobile */
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  
 }
