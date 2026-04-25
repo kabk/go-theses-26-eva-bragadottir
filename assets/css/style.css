@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-
-
-/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
-
-/* 
-  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
-  or 'transfonter' (https://transfonter.org)
-  to generate your own font for the web from .ttf or .oft files 
-*/
-
 @font-face {
   font-family: "plantin", serif;
   src: "https://use.typekit.net/dyw8qka.css";
@@ -18,26 +8,15 @@
   font-display: block;
 }
 
-
-
-
-
-/* VARIABLES */
-
 :root {
-  /* Color values */
   --color-background: rgba(255, 255, 255, 1);
   --color-text: rgb(111, 111, 111);
   --color-text-link: rgba(0, 0, 0, 0.8);
   --color-text-link-hover: rgba(0,0,0,0.5);
-  /* Font values */
   --font-text: 'plantin', serif;
   --font-size: 15px;
-  /* Margin values */
   --margin: 1rem;
---page-width: 680px;
-
-  /* Examples of possible variables */
+  --page-width: 680px;
 
   --font-size-heading: calc(var(--font-size) * 2);
   --font-size-subheading: calc(var(--font-size) * 1.25);
@@ -48,18 +27,12 @@
   --margin-m: calc(var(--margin) * 2);
   --margin-l: calc(var(--margin) * 3);
   --margin-xl: calc(var(--margin) * 5);
-
 }
 
-
-
-/* GENERAL STYLES */
-
 html {
-  font: var(--font-size) var(--font-family);
+  font: var(--font-size) var(--font-text);
   color: var(--color-text);
   background-color: var(--color-background);
-
   scroll-behavior: smooth;
 }
 
@@ -73,20 +46,19 @@ header{
     z-index: -1;
     background-color: white;
 }
+
 body {
   position: relative;
   background-color: var(--color-background);
-  font: var(--font-size) var(--font-family);
+  font: var(--font-size) var(--font-text);
   color: var(--color-text);
   width: 100%;
   height: auto;
   overflow-y: visible;
   display: block;
-  unicode-bidi: isolate;
-  /* display: flex; */
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
-  min-height: 100vh;         /* full viewport height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
   margin-top: 94vh;
   padding: 0.5rem 0;
@@ -94,28 +66,24 @@ body {
   border-top: 1px solid rgb(111, 111, 111);
 }
 
-.is-chapter {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: justify;
-}
 
 a {
   color: var(--color-text-link);
   text-decoration: none;
 }
 
+.ref-work {
+  color: white;
+}
 
+.ref-work:hover {
+  color: rgb(255, 221, 0);
+}
 
 h1 {
-  /* h1 style */
-  font-size: clamp(var(--font-size-heading),
-      3vw,
-      calc(var(--font-size-heading) * 1.1));
-      text-align: center;
-      color: rgba(55, 55, 55, 0.76)
+  font-size: clamp(var(--font-size-heading), 3vw, calc(var(--font-size-heading) * 1.1));
+  text-align: center;
+  color: rgba(55, 55, 55, 0.76)
 }
 
 .closer {
@@ -135,6 +103,10 @@ h3 {
   text-align: center;
   margin-bottom: 0.8rem;
   margin-top: 4.8rem;
+}
+
+.reference-list {
+  margin-top: 1rem;
 }
 
 h4 {
@@ -160,7 +132,6 @@ p {
   line-height: 1.3rem;
 }
 
-
 .blockquote {
   margin-left: 10%;
   margin-right: 8%;
@@ -168,28 +139,14 @@ p {
   line-height: 1.3rem;
 }
 
-hr {
-  /* horizontal rule style */
-}
-
-
-
-/* PAGE STYLES */
-
-/* page structure */
 
 div.page-wrapper {
-  /* the element that 'wraps' everything */
   width: fit-content;
   max-width: var(--page-width);
   padding: var(--margin);
   margin-inline: auto;
   isolation: isolate;
 }
-
-
-
-/* content */
 
 main {
   max-width: 60ch;
@@ -207,7 +164,7 @@ nav{
   align-items: center;
 
   font-size: clamp(3rem, 4vw, 3rem);
-  padding: clamp(0.5rem, 2vw, 1.5rem);
+  padding: clamp(0.5rem, 2vw, 1rem);
 
   background-image: linear-gradient(white 34%, transparent);
   z-index: 1;
@@ -218,14 +175,30 @@ nav{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  
 }
 
+#scrollTopBtn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: bolder;
+  border: none;
+  border-radius: 100%;
+  color: rgb(111, 111, 111);
+  cursor: pointer;
+  opacity: 0;
+  scale: 1;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 20;
+}
 
-
-/* UTILITY CLASSES */
-
-/* hide desktop mobile etc */
+#scrollTopBtn:hover {
+  color: rgb(175, 150, 50);
+  transform: scale(130%);
+}
 
 .desktop-only {
   display: block;
@@ -235,18 +208,10 @@ nav{
   display: none;
 }
 
-
-
-
-
-/* WEBSITE MEDIA QUERIES */
-
-/* responsive typeface for various breaking points, sets the default 'rem' value */
 @media (max-width: 299px) {
   :root {
     --font-size: 18px;
   }
-
   
   html,
   body {
@@ -331,19 +296,11 @@ nav{
   }
 }
 
-/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
-/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
-
 @media (max-width: 779px) {
-  /* your 'mobile' overriding css properties here */
-
 
 .side-text{
   font-size: 0.6rem;
 }
-
-
-  /* utility classes, mobile */
 
   .desktop-only {
     display: none;
@@ -351,41 +308,8 @@ nav{
 
   .mobile-only {
     display: block;
-  }
-
-  
+  }  
 }
-
-
-
-/* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
-
-@media (max-width: 339px) {
-
-  /* your overriding css properties here */
-
-}
-
-
-
-/* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
-
-@media (max-width: 779px) and (orientation: landscape) {
-
-  /* your overriding css properties here */
-
-}
-
-
-
-/* use this query to apply style for 'small' desktop screens */
-
-@media (min-width: 780px) and (max-width: 992px) {
-
-  /* your overriding css properties here */
-
-}
-
 
 ::selection {
     color: var(--color-background);
@@ -409,8 +333,6 @@ nav{
   scale: 1.005;
 }
 
-
-
 .text-img-wrapper {
   position: relative;
   width: 300px;
@@ -426,7 +348,7 @@ nav{
 }
 
 .overlay-img {
-  position: absolute;   /* 🔥 change this */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -436,10 +358,8 @@ nav{
   z-index: 2;
 }
 
-
 .overlay-img.active {
   opacity: 1;
-  
 }
 
 #sidenote {
@@ -456,7 +376,6 @@ nav{
 }
 
  #sidenote.active {
-    position: fixed;
     display: flex;  /* horizontal center */
     align-items: center;     
     flex-direction:column;
@@ -467,27 +386,38 @@ nav{
 }
 
 .side-text {
-  font-size: 14px;
-  margin-bottom: 0.7%;
-  margin-top: 0.7%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: small;
+  margin-bottom: 0.3%;
+  margin-top: 0.3%;
+  padding:0.5rem;
+  transition: background 0.3s;
+}
+
+.side-text.active {
+  border: solid 1px;
+  border-radius: 20px;
 }
 
 #hideBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+
   cursor: pointer;
-  margin-top: 2%;
   font-size: 14px;
+  background: none;
+  border: none;
+  color: white;
+  font-weight:bold;
 }
 
 #hideBtn:hover {
   color: rgb(111, 111, 111);
-  margin-top: 2%;
   font-size: 14px;
 }
 
 .toggleBtn {
-  z-index: 2; /* stays clickable */
+  z-index: 2;
   cursor: pointer;
   color:rgb(175, 150, 50);
   vertical-align:bottom;
@@ -495,18 +425,10 @@ nav{
   transition: 0.4s ease-in-out;
 }
 
-
 .toggleBtn:hover {
   color: rgb(240, 210, 1);
   cursor: pointer;
   transform: scale(1.5) rotate(17deg);
-}
-
-.chapter-nav button {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 
@@ -528,8 +450,6 @@ nav ul button {
     opacity: 1;
     transition: 0.2s ease-in-out;
 }
-
-
 
 nav ul button:hover {
   color: rgb(176, 149, 53);
@@ -567,17 +487,29 @@ header.gold-header {
   transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 779px) {
-  /* your 'mobile' overriding css properties here */
+.small-print{
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  margin-top:1rem;
+}
 
+#signature{
+  margin-top:-1rem;
+}
+
+@media (max-width: 779px) {
+
+.reference-list{
+  margin-top: 3rem;
+}
 
 .side-text{
   font-size: 0.8rem;
   line-height: 1.25;
+  margin-right: 10%;
+  margin-left: 10%;  
 }
-
-
-  /* utility classes, mobile */
 
   .desktop-only {
     display: none;
@@ -586,6 +518,4 @@ header.gold-header {
   .mobile-only {
     display: block;
   }
-
-  
 }

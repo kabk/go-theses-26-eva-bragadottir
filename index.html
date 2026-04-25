@@ -3,40 +3,28 @@
 <html lang="en">
 
 <head>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-	<!-- meta tags, fill them with website meta infos -->
-	<meta name="Title" content="From Consumption to Digestion: Rethinking Engagement in a Contemporary Media Environment" />
+	<meta name="Title"
+		content="From Consumption to Digestion: Rethinking Engagement in a Contemporary Media Environment" />
 	<meta name="Keywords" content="Digestion, Consumption, Diet, Speed, Efficiency" />
 	<meta name="Author" content="Eva Sóldís Bragadóttir" />
 
-	<!-- favicon, fill with a 512x512px .png image named 'favicon.png' -->
 	<link rel="icon" href="assets/images/favicon/favicon.png" />
 
-	<!-- website title, visible in the browser window and on link sharing -->
 	<title>From Consumption to Digestion</title>
 
-	<!-- links for extensions and dependencies -->
-
-	<!-- css -->
-	<!-- first link your CSS dependences, here is normalize, a CSS 'reset' for cross-browser appearence uniformity -->
 	<link rel="stylesheet" href="assets/css/normalize.css">
-	<!-- zeroing out typographic browser default settings -->
 	<link rel="stylesheet" href="assets/css/zero.css">
-	<!-- Plantin typeface -->
 	<link rel="stylesheet" href="https://use.typekit.net/dyw8qka.css">
-	<!-- you stylesheet -->
 	<link rel="stylesheet" href="assets/css/style.css?ver=1.0">
-
-
 </head>
 
 <body>
-		<header>
+	<header>
 		<h1>
-			From <button id="bgToggle">Consumption</button> to 
+			From <button id="bgToggle">Consumption</button> to
 			<button id="bgToggleGold">Digestion</button>:
 		</h1>
 		<h1 class="closer">
@@ -49,87 +37,112 @@
 	</header>
 
 	<div id="sidenote" class="hidden">
-		<h3>
+		<h3 class="reference-list">
 			REFERENCES
 		</h3>
-		<p class="side-text">
+		<p class="side-text" data-ref="1">
 			1. Friedrich Nietzsche,
-			<span style="font-style:italic">Thus Spoke Zarathustra</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://archive.org/details/thus-spoke-zarathustra/mode/2up">
+					Thus Spoke Zarathustra</a></span>,
 			trans. Thomas Common (New York: Random House, Inc., 1917), 50.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="2">
 			2. George Orwell,
-			<span style="font-style:italic">1984</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://dn790002.ca.archive.org/0/items/NineteenEightyFour-Novel-GeorgeOrwell/orwell1984.pdf">
+					1984</a></span>,
 			(London: Secker & Warburg, 1949).
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="3">
 			3. Neil Postman,
-			<span style="font-style:italic">Amusing Ourselves to Death: Public Discourse in the Age of Show
-				Business</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://ia801705.us.archive.org/4/items/Various_PDFs/NeilPostman-AmusingOurselvesToDeath.pdf">
+					Amusing Ourselves to Death: Public Discourse in the Age of Show Business</a></span>,
 			(New York: Penguin, 1985), Foreword, xix.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="4">
 			4. Aldous Huxley,
-			<span style="font-style:italic">Brave New World</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://dn790000.ca.archive.org/0/items/BraveNewWorld-and-BraveNewWorldRevisited/Brave-New-World_-_Aldous-Huxley.pdf">
+				Brave New World</a></span>,
 			(London: Chatto & Windus, 1932).
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="5">
 			5. Postman,
-			<span style="font-style:italic">Amusing Ourselves to Death</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://ia801705.us.archive.org/4/items/Various_PDFs/NeilPostman-AmusingOurselvesToDeath.pdf">
+					Amusing Ourselves to Death</a></span>,
 			136.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="6">
 			6. Priscila Fernandes,
-			<span style="font-style:italic">News Stand</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://priscilafernandes.net/projects/news-stand">
+					News Stand</a></span>,
 			Dialogue Gallery, 2025.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="7">
 			7. Nietzsche,
-			<span style="font-style:italic"> Thus Spoke Zarathustra</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://archive.org/details/thus-spoke-zarathustra/mode/2up">
+					Thus Spoke Zarathustra</a></span>,
 			216.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="8">
 			8. Marina Abramović,
-			<span style="font-style:italic"> Counting the Rice</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://www.voorlinden.nl/counting-the-rice/">
+					Counting the Rice</a></span>,
 			2015, viewed at Museum Voorlinden 2026.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="9">
 			9. European Commission,
-			<span style="font-style:italic">“Commission preliminarily finds TikTok’s addictive design in breach
-				of the Digital Services Act,”</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_312">
+					“Commission preliminarily finds TikTok’s addictive design in breach
+					of the Digital Services Act,”</a></span>,
 			press release IP/26/312, February 6, 2026.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="10">
 			10. Postman,
-			<span style="font-style:italic">Amusing Ourselves to Death</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://ia801705.us.archive.org/4/items/Various_PDFs/NeilPostman-AmusingOurselvesToDeath.pdf">
+					Amusing Ourselves to Death</a></span>,
 			137.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="11">
 			11. Silvio Lorusso,
-			<span style="font-style:italic">What Design Can’t Do: Essays on Design and Disillusion</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://www.setmargins.press/books/what-design-cant-do/">What Design Can’t Do: Essays on Design and Disillusion</a></span>,
 			(Amsterdam: Set Margins’, 2023), 297.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="12">
 			12. Silvio Lorusso,
-			<span style="font-style:italic">Shouldn’t You Be Working?</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://silviolorusso.com/work/shouldnt-you-be-working/">
+					Shouldn’t You Be Working?</a></span>,
 			installation, 2016.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="13">
 			13. Silvio Lorusso,
-			<span style="font-style:italic">What Design Can’t Do: Essays on Design and Disillusion</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://www.setmargins.press/books/what-design-cant-do/">What Design Can’t Do: Essays on Design and Disillusion</a></span>,
 			297.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="14">
 			14. Sebastian Schmieg,
-			<span style="font-style:italic">Speed Reading</span>,
+			<span style="font-style:italic">
+				<a class="ref-work" href="https://sebastianschmieg.com/speed-reading/">
+					Speed Reading</a></span>,
 			installation, 2018.
 		</p>
-		<p class="side-text">
+		<p class="side-text" data-ref="15">
 			15.
 			<span style="font-style:italic">Instant Nourishment</span>,
 			author’s own design project, 2026.
 		</p>
-		<button id="hideBtn">HIDE</button>
+		<button id="hideBtn">✕</button>
 
 	</div>
 	<nav>
@@ -144,11 +157,7 @@
 		</ul>
 	</nav>
 
-
-
 	<div class="page-wrapper">
-
-
 		<main>
 			<div id="abstract">
 				<h2 class="extra-heading">
@@ -195,8 +204,8 @@
 					it instantly in favour of something faster, more effortless.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig1.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig2.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig1.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig2.jpg" alt="Overlay" />
 				</div>
 				<p class="main-text">
 					I recognise that I am scrolling toward a state of fulfilment that never arrives, stopping only when
@@ -215,7 +224,7 @@
 				<p class="main-text">
 					This metabolic model of thinking is not new; philosopher Friedrich Nietzsche famously invoked
 					digestion as a metaphor for the labour of thought, emphasising the need to process and “chew” ideas
-					rather than merely swallow them whole.<span><button class="toggleBtn">*</button></span>
+					rather than merely swallow them whole.<span><button class="toggleBtn" data-ref="1">*</button></span>
 					Within this framework, I propose interruption, pause, and
 					resistance as ways of disrupting seamless loops of information consumption. I describe these moments
 					of disruption as forms of friction, and explore them as a strategy enabling deeper reflection and
@@ -247,7 +256,7 @@
 
 				<p class="main-text">
 					I read
-					<span style="font-style:italic">1984</span><span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">1984</span><span><button class="toggleBtn" data-ref="2">*</button></span>
 					when I was fourteen, and George Orwell’s dystopian vision of a society in which
 					individual freedom is suppressed through surveillance, control of information, and enforced
 					conformity left a lingering sense of unease. The novel depicts a world where truth is constantly
@@ -256,7 +265,8 @@
 					classic and contemporary society – where information is increasingly shaped by media systems that
 					influence what we see and believe. Because of this, my attention was immediately caught when I
 					encountered the following passage in
-					<span style="font-style:italic">Amusing Ourselves to Death</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,<span><button
+							class="toggleBtn" data-ref="3">*</button></span>
 					a 1985 book by media theorist
 					Neil Postman:
 				</p>
@@ -270,7 +280,8 @@
 					Postman’s warning of a society that grows to love the same technologies that strip away its capacity
 					for thought haunts me as I think of all the times I have scrolled past content that would require
 					deeper engagement than half a glance and a chuckle. Here, he is referring to Aldous Huxley’s
-					<span style="font-style:italic">Brave New World</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Brave New World</span>,<span><button
+							class="toggleBtn" data-ref="4">*</button></span>
 					a dystopian vision comparable to Orwell’s
 					<span style="font-style:italic">1984</span>,
 					but achieved through fundamentally
@@ -285,7 +296,8 @@
 				</p>
 				<p class="main-text">
 					In
-					<span style="font-style:italic">Amusing Ourselves to Death</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,<span><button
+							class="toggleBtn" data-ref="5">*</button></span>
 					Postman compares Huxley’s vision to contemporary society, warning
 					that communication and information systems that prioritise entertainment over reflection create
 					“present-centred mediums.” These platforms deliver fragmented information without context or
@@ -329,39 +341,39 @@
 					that feels meaningful and staying with it a moment longer.
 				</p>
 				<p class="main-text">
-					Often, this happened while listening, <button class="inline-btn" onclick="showImage()">
-					drawing, and writing intuitively;
+					Often, this happened while listening, drawing, and writing intuitively; pausing and rewinding to
+					<button class="inline-btn" onclick="showImage()">
+					capture fragments,
 					</button>
-					pausing and rewinding to
-					capture fragments, then responding to them through text or image. Breaking information apart and
+					then responding to them through text or image. Breaking information apart and
 					reassembling it in this way became a way of moving from consumption toward digestion.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig3.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig4.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig3.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig4.jpg" alt="Overlay" />
 				</div>
 				<p class="main-text">
 					This approach of breaking down information and reflecting on it through text and image resonates
 					with the work of Portuguese artist Priscila Fernandes, particularly her exhibition
-					<span style="font-style:italic">News Stand</span>.<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">News Stand</span>.<span><button class="toggleBtn" data-ref="6">*</button></span>
 					In this project, Fernandes processes current events by translating them into drawings, as a way of
 					processing violence and terror. The title refers to the familiar newspaper stand, a site typically
 					associated with the rapid distribution and consumption of information, while subtly disrupting that
-					expectation. Rather than facilitating the quick intake of news, she slows it down, 
+					expectation. Rather than facilitating the quick intake of news, she slows it down,
 					<button class="inline-btn" onclick="showImage()">
-					isolating and reworking them
+						isolating and reworking them
 					</button>
 					into something that can be held, examined, and reflected on.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig6.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig5.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig6.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig5.jpg" alt="Overlay" />
 				</div>
 				<p class="main-text">
 					I see in this method a clear parallel to my own process, where instead of letting information pass
-					through, I intercept it. Through 
+					through, I intercept it. Through
 					<button class="inline-btn" onclick="showImage()">
-					writing and drawing</button>,
+						writing and drawing</button>,
 					I force my mind to move from passive reception
 					to active construction, preventing the information from being ‘swallowed’ whole and unexamined. This
 					process functions as a sort of manual ‘chewing’ of the material, stripping it of its original speed
@@ -369,8 +381,8 @@
 					substance that I actively shape instead of a signal leaving nothing behind.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig7.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig8.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig7.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig8.jpg" alt="Overlay" />
 				</div>
 			</div>
 
@@ -406,7 +418,8 @@
 					This act of selection requires a conscious engagement that fundamentally interrupts the mindless
 					consumption I recognised in my habit of scrolling. In this view, information cannot simply be
 					swallowed; to truly take hold, it must be filtered, metabolised, and transformed. In
-					<span style="font-style:italic">Thus Spoke Zarathustra</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Thus Spoke Zarathustra</span>,<span><button
+							class="toggleBtn" data-ref="7">*</button></span>
 					Nietzsche writes:
 				</p>
 
@@ -424,15 +437,15 @@
 
 				<p class="main-text">
 					After breaking information into fragments through drawing and writing, I spent weeks sitting with
-					them, revisiting and reworking the pieces to see how their 
+					them, revisiting and reworking the pieces to see how their
 					<button class="inline-btn" onclick="showImage()">meanings shifted over time</button>.
 					While this
 					slowed engagement created a sense of connection, it also raised a question: was I actually
 					processing these fragments, or merely hoarding them?
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig12.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig11.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig12.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig11.jpg" alt="Overlay" />
 				</div>
 				<p class="main-text">
 					Nietzsche’s metaphor requires both absorption and refusal, yet my process lacked that final act of
@@ -445,7 +458,7 @@
 
 				<p class="main-text">
 					Inspired by Nietzsche’s selective approach, I began dissecting my drawings and writings. I isolated
-					elements that resonated and 
+					elements that resonated and
 					<button class="inline-btn" onclick="showImage()">recontextualised them</button>,
 					rather than trying to force them back into their
 					original narrative. This slower rhythm – of deconstructing, reflecting, and reapproaching – felt
@@ -453,25 +466,27 @@
 					information must flow continuously to be useful.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig10.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig9.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig10.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig9.jpg" alt="Overlay" />
 				</div>
 				<p class="main-text">
 					My attempt to find room for reflection aligns with several artistic practices that reclaim
 					meaningful engagement by shifting the rhythm of attention. I encountered a profound example of this
 					earlier this year at Museum Voorlinden:
-					<span style="font-style:italic">Counting the Rice</span><span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Counting the Rice</span><span><button
+							class="toggleBtn" data-ref="8">*</button></span>
 					by Serbian artist Marina Abramović. In
-					this exercise, participants spend an hour 
-					<button class="inline-btn" onclick="showImage()">separating and counting</button> individual grains of rice and lentils.
+					this exercise, participants spend an hour
+					<button class="inline-btn" onclick="showImage()">separating and counting</button> individual grains
+					of rice and lentils.
 					The task is intentionally repetitive, often provoking initial frustration or boredom. Yet,
 					as the minutes pass, the act shifts the participants’ attention, making it sharper, more deliberate.
 					In this way, the exercise functions as a training in patience, an invitation to remain with the
 					material until the impulse to move on subsides, allowing a more active mode of engagement to emerge.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig14.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig13.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig14.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig13.jpg" alt="Overlay" />
 				</div>
 
 				<p class="main-text">
@@ -518,8 +533,10 @@
 					distinguish meaningful information from disposable noise. Without this distinction, the essential
 					“elimination” of trivial input becomes impossible. Algorithmically curated feeds and infinite
 					scrolls on platforms such as TikTok, deliver a stream of content that encourages continuous
-					consumption without reflection.<span><button class="toggleBtn">*</button></span> As Neil Postman warns in
-					<span style="font-style:italic">Amusing Ourselves to Death</span>,<span><button class="toggleBtn">*</button></span>
+					consumption without reflection.<span><button class="toggleBtn" data-ref="9">*</button></span> As Neil Postman
+					warns in
+					<span style="font-style:italic">Amusing Ourselves to Death</span>,<span><button
+							class="toggleBtn" data-ref="10">*</button></span>
 					we are being rendered “unfit to remember” because information is stripped of the context needed to
 					organise
 					it into meaning. When a fact’s only context is the next meaningless short-form video, no patterns
@@ -529,7 +546,8 @@
 
 				<p class="main-text">
 					In his book
-					<span style="font-style:italic">What Design Can't Do</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">What Design Can't Do</span>,<span><button
+							class="toggleBtn" data-ref="11">*</button></span>
 					designer and writer Silvio Lorusso questions the designer’s
 					complicity in mindless consumption. He rejects the assumption that design should optimize for speed
 					and volume, arguing instead for the necessity of boundaries. By replacing endless streams of content
@@ -540,14 +558,16 @@
 
 				<p class="main-text">
 					Lorusso’s project,
-					<span style="font-style:italic">Shouldn't You Be Working?</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Shouldn't You Be Working?</span>,<span><button
+							class="toggleBtn" data-ref="12">*</button></span>
 					translates this theory into a physical intervention.
 					By de-contextualising a browser extension that interrupts online activity with questions about
-					productivity and repositioning its prompts onto 
+					productivity and repositioning its prompts onto
 					<button class="inline-btn" onclick="showImage()">physical banners and stickers</button>,
 					he manifests the
 					“intentional pause” he advocates for in
-					<span style="font-style:italic">What Design Can't Do</span>.<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">What Design Can't Do</span>.<span><button
+							class="toggleBtn" data-ref="13">*</button></span>
 					These objects function as tactile
 					boundaries; by dragging the invisible pressures of digital efficiency into the real world, Lorusso
 					forces a confrontation with the systems that govern our time, creating the very space for reflection
@@ -555,16 +575,17 @@
 				</p>
 
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig17.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig18.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig17.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig18.jpg" alt="Overlay" />
 				</div>
 
 				<p class="main-text">
 					A contrasting critique emerges in the installation
-					<span style="font-style:italic">Speed Reading</span>,<span><button class="toggleBtn">*</button></span>
+					<span style="font-style:italic">Speed Reading</span>,<span><button
+							class="toggleBtn" data-ref="14">*</button></span>
 					in which German artist Sebastian Schmieg presents text at a pace exceeding human comprehension.
 					While Lorusso uses interruptions to
-					slow the viewer down, Schmieg 
+					slow the viewer down, Schmieg
 					<button class="inline-btn" onclick="showImage()">accelerates the flow</button>
 					of information until reading becomes a purely
 					mechanical act. By pushing velocity to the point of illegibility, he exposes a media logic that
@@ -575,8 +596,8 @@
 				</p>
 
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig19.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig20.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig19.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig20.jpg" alt="Overlay" />
 				</div>
 
 				<p class="main-text">
@@ -584,8 +605,9 @@
 					Instead of interrupting the flow like Lorusso or accelerating it like Schmieg, I reprocess the
 					information itself – reorganising, condensing, and recirculating fragments to test their endurance.
 					This method is exemplified in my exercise
-					<span style="font-style:italic">Instant Nourishment</span>,<span><button class="toggleBtn">*</button></span>
-					a series of typographic 
+					<span style="font-style:italic">Instant Nourishment</span>,<span><button
+							class="toggleBtn" data-ref="15">*</button></span>
+					a series of typographic
 					<button class="inline-btn" onclick="showImage()">“nutrition labels”</button>
 					that apply the visual and structural logic of commercial
 					food packaging to abstract
@@ -594,12 +616,9 @@
 					the speed of consumption and the depth of digestion.
 				</p>
 				<div class="text-img-wrapper">
-  					<img class="text-img" src="content/fig21.jpg" alt="TikTok visual">
-  					<img class="overlay-img" src="content/fig22.jpg" alt="Overlay" />
+					<img class="text-img" src="content/fig21.jpg" alt="TikTok visual">
+					<img class="overlay-img" src="content/fig22.jpg" alt="Overlay" />
 				</div>
-				
-
-
 				<p class="main-text">
 					This displacement makes the tension between rapid legibility and deep comprehension perceptible.
 					While the commercial aesthetic invites the viewer to skim, the nuanced content resists such a
@@ -615,22 +634,17 @@
 					deliberate engagement.
 				</p>
 			</div>
-
-
-
 			<div id="conclusion">
 				<hr>
 				<h2 class="extra-heading">
 					Conclusion
 				</h2>
-
 				<p class="main-text">
 					This project began with a simple observation: I was consuming information without processing it,
 					without feeling nourished by it. The more efficiently information was delivered to me, the less it
 					seemed to stay with me. What appeared to be a personal habit revealed a broader condition; one that
 					encourages constant intake, leaving little space for reflection or refusal.
 				</p>
-
 				<p class="main-text">
 					By treating design as a metabolic act, I have moved from the passive pacification Postman warned
 					about toward a practice of active resistance. This inquiry proves that the threat to our autonomy is
@@ -639,7 +653,6 @@
 					in taking in as much information as possible in the minimum amount of time, but in drawing
 					deliberate boundaries to facilitate meaningful engagement.
 				</p>
-
 				<p class="main-text">
 					To reclaim the agency over what is metabolised and what is discarded, we must honour the space for
 					reflection and isolate the fragments that truly resonate. Allowing these ideas the room to take root
@@ -647,7 +660,6 @@
 					selection – a necessary refusal in the infinite stream of content that threatens to bury meaning in
 					a flood of trivial information.
 				</p>
-
 				<p class="main-text">
 					Graphic design plays an active role in shaping these conditions, influencing how information is
 					taken in, how quickly it moves, and whether there is space for reflection. Because of this, design
@@ -656,7 +668,6 @@
 					moments of friction: pauses, interruptions, and structures that resist immediate comprehension.
 					These moments slow the flow of information just enough to allow for digestion.
 				</p>
-
 				<p class="main-text">
 					My work does not aim to resolve the tension between speed and understanding, but to inhabit it. By
 					using the visual language of “efficient” consumption to force a halt, I introduce the friction
@@ -664,7 +675,6 @@
 					in; it is found in the creation of a space where ideas are not merely seen, but transformed into
 					knowledge.
 				</p>
-
 				<div id="acknowledgements">
 					<hr>
 					<h2 class="extra-heading">
@@ -676,34 +686,32 @@
 				</p>
 				<p>
 					From Consumption to Digestion: <span style="font-style: italic;">Rethinking Engagement in a
-					Contemporary Media Environment</span> is a research document by Eva Sóldís Bragadóttir.
+						Contemporary Media Environment</span> is a thesis by Eva Sóldís Bragadóttir.
 				</p>
-
 				<p>
 					Made possible with the valuable guidance of Barbara Neves Alves, Bart de Baets, Riet
-					Wijnen, François Girard-Meunier, Thomas Buxó, Pascal de Man, and the continued support of family and friends.
+					Wijnen, François Girard-Meunier, Thomas Buxó, Pascal de Man, and the continued support of family and
+					friends.
 				</p>
+				<p>
+					I would like to acknowledge the use of AI tools, which assisted in refining the language of this
+					essay.
+				</p>
+				<hr>
+				<p class="small-print">
+					This is to certify that to the best of my knowledge, the content of this thesis is my own work. This
+					thesis has not previously been submitted for any degree or other purposes.
+					I certify that the intellectual content of this thesis is the product of my own work and that all
+					the
+					assistance received in preparing this thesis and sources have been acknowledged.
+				</p>
+				<p class="small-print" id="signature">
+					Signed, Eva Sóldís Bragadóttir.
+				</p>
+				<button id="scrollTopBtn">⌃</button>
 			</div>
-
-
 		</main>
-
-
-
-
-
-
 	</div>
-
-
-
-	<!-- end webpage content -->
-
-
-	<!-- website script right before closing -->
-	<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
-
-
+<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
 </body>
-
 </html>

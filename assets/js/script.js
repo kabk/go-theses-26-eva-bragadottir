@@ -1,5 +1,3 @@
-// we make sure the JavaScript file loads after our HTML by using a function test if the HTML is loaded
-
 function docReady(fn) {
   if (document.readyState === "complete" || document.readyState === "interactive") {
       setTimeout(fn, 1);
@@ -9,7 +7,6 @@ function docReady(fn) {
 }   
 
 docReady(function() {
-  //  overlay images (scalable version)
   document.querySelectorAll(".inline-btn").forEach(btn => {
     btn.addEventListener("click", () => {
 
@@ -23,54 +20,102 @@ docReady(function() {
     });
   });
 
-  // grey button
-  const bgBtn = document.getElementById("bgToggle");
+const bgBtn = document.getElementById("bgToggle");
 
   if (bgBtn) {
     bgBtn.addEventListener("click", () => {
       const header = document.querySelector("header");
 
-      header.classList.remove("gold-header");   // remove gold
-      header.classList.add("red-header");       // always set gray
+      header.classList.remove("gold-header");
+      header.classList.add("red-header");
     });
   }
 
-  // gold button
   const goldBtn = document.getElementById("bgToggleGold");
 
   if (goldBtn) {
     goldBtn.addEventListener("click", () => {
       const header = document.querySelector("header");
 
-      header.classList.remove("red-header");    // remove grey
-      header.classList.add("gold-header");      // always set gold
+      header.classList.remove("red-header");
+      header.classList.add("gold-header");
     });
   }
 
-  // toggle sidenote
   const buttons = document.querySelectorAll('.toggleBtn');
   const sidenote = document.getElementById('sidenote');
+  const refs = document.querySelectorAll('.side-text');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
+      const refNumber = button.getAttribute('data-ref');
+
+      if (
+        sidenote.classList.contains('active') &&
+        sidenote.dataset.current === refNumber
+      ) {
+        sidenote.classList.remove('active');
+        sidenote.dataset.current = '';
+        refs.forEach(ref => ref.classList.remove('active'));
+        return;
+      }
+
       sidenote.classList.add('active');
+      sidenote.dataset.current = refNumber;
+
+      refs.forEach(ref => ref.classList.remove('active'));
+
+      const target = document.querySelector(`.side-text[data-ref="${refNumber}"]`);
+      if (target) {
+        target.classList.add('active');
+
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      }
     });
   });
 
-  // close sidenote
   const hideBtn = document.getElementById("hideBtn");
   if (hideBtn) {
     hideBtn.addEventListener("click", () => {
       sidenote.classList.remove("active");
+      sidenote.dataset.current = '';
+      refs.forEach(ref => ref.classList.remove('active'));
     });
   }
 
-  // chapter navigation
   window.goToChapter = function(id) {
     document.getElementById(id).scrollIntoView({
       behavior: "smooth"
     });
     sidenote.classList.remove('active');
+    sidenote.dataset.current = '';
+    refs.forEach(ref => ref.classList.remove('active'));
   };
+
+  const scrollBtn = document.createElement("button");
+  scrollBtn.innerHTML = "⌃";
+  scrollBtn.id = "scrollTopBtn";
+
+  document.body.appendChild(scrollBtn);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.opacity = "1";
+      scrollBtn.style.pointerEvents = "auto";
+    } else {
+      scrollBtn.style.opacity = "0";
+      scrollBtn.style.pointerEvents = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 
 });
